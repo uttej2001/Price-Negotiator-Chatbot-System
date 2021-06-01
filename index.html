@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Chat Widget</title>
+</head>
+<body>
+<div id="webchat"/>
+<script src="https://storage.googleapis.com/mrbot-cnd/webchat-0.5.8.js"></script>
+<script>
+  !(function () {
+    let e = document.createElement("script"),
+      t = document.head || document.getElementsByTagName("head")[0];
+    (e.src = "https://cdn.jsdelivr.net/npm/rasa-webchat/lib/index.js"),
+      (e.async = !0),
+      (e.onload = () => {
+        window.WebChat.default(
+          {
+            socketUrl: "http://localhost:5005",
+          },
+          null
+        );
+      }),
+      t.insertBefore(e, t.firstChild);
+  })();
+</script>
+</body>
+</html>

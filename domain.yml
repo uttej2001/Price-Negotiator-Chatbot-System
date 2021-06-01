@@ -1,0 +1,212 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - product_available
+  - product_list
+  - bikes
+  - touring
+  - road
+  - mountain
+  - accessories
+  - ties
+  - belts
+  - caps
+  - fashion
+  - vintage
+  - casual
+  - formal
+  - negotiation
+  - no_negotiation
+  - discount_offer
+  - discount
+  - offer
+  - last
+  - accept
+  - refuse
+
+actions:
+  - action_product_list
+  - action_bikes
+  - action_touring
+  - action_road
+  - action_mountain
+  - action_accessories
+  - action_belts
+  - action_ties
+  - action_caps
+  - action_fashion
+  - action_vintage
+  - action_casual
+  - action_formal
+  - action_discount_offer
+  - action_discount
+  - action_offer
+  - action_last
+
+entities:
+  - product
+  - bikes
+  - touring
+  - road
+  - mountain
+  - accessories
+  - belts
+  - ties
+  - caps
+  - fashion
+  - vintage
+  - casual
+  - formal
+  - discount_offer
+  - discount
+  - offer
+  - last
+
+slot:
+  product:
+    type: text    
+  bikes:
+    type: text
+  touring:
+    type: text
+  road:
+    type: text
+  mountain:
+    type: text
+  accessories:
+    type: text
+  belts:
+    type: text
+  caps:
+    type: text
+  ties:
+    type: text     
+  fashion:
+    type: text
+  vintage:
+    type: text
+  casual:
+    type: text
+  formal:
+    type: text
+  discount_offer:
+    type: text
+  discount:
+    type: float
+  offer:
+    type: float
+  last:
+    type: float 
+  
+responses:
+
+  utter_product_available: 
+  - text: "We have Bikes, Accessories, Fashion."
+
+  utter_bikes:
+  - text: "What do you prefer?"
+     
+  utter_touring:
+  - text: "Here is a product you may like"
+    image: "https://cutt.ly/GnpUKo8"
+
+  utter_road:
+  - text: "Here is a product you may like"
+    image: "https://cutt.ly/tnpISEe"
+
+  utter_mountain:
+  - text: "Here is a product you may like"
+    image: "https://cutt.ly/dnpUMzA"
+
+  utter_accessories:
+  - text: "What do you prefer?"
+
+  utter_belts:
+  - text: "Here is a product you may like"
+    image: "https://cutt.ly/Snor5X6"
+
+  utter_caps:
+  - text: "Here is a product you may like"
+    image: "https://cutt.ly/4noeMEW"
+  
+  utter_ties:
+  - text: "Here is a product you may like"
+    image: "https://cutt.ly/mnotrJC" 
+
+  utter_fashion:
+  - text: "What do you prefer?"
+
+  utter_vintage:
+  - text: "Here is a product you may like"
+    image: "https://cutt.ly/4nooNmT"
+
+  utter_casual:
+  - text: "Here is a product you may like"
+    image: "https://cutt.ly/xnoo7c3"
+  
+  utter_formal:
+  - text: "Here is a product you may like"
+    image: "https://cutt.ly/vnopes0"
+
+  utter_choose_negotiation:
+  - text: "Do you wish to negotiate the discount percentage?"
+    buttons:
+      - title: "Yes"
+        payload: "/negotiation"
+      - title: "No"
+        payload: "/no_negotiation"
+
+  utter_negotiation:
+  - text: "Hit me with your best shot"
+
+  utter_choose:
+  - text: "Accept/Refuse"
+    buttons:
+      - title: "Accept"
+        payload: "/accept"
+      - title: "Refuse"
+        payload: "/refuse"
+
+  utter_greet:
+  - text: "Hello! How may I help you?"
+
+  utter_thankyou:
+  - text: "Thank you for choosing this product without negotiating. You can purchase it through this link.https://cutt.ly/9nsfpcH"
+    image: "https://cutt.ly/snarC6d"
+
+  utter_thanks:
+  - text: "Thank you for choosing this product. You can purchase it through this link.https://cutt.ly/9nsfpcH"
+    image: "https://cutt.ly/snarC6d"
+    
+  utter_continue:
+  - text: "You can continue to negotiate or choose a different product."
+
+  utter_final_continue:
+  - text: "You can choose a different product"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "goodbye :-)"
+
+  utter_iamabot:
+  - text: "I am an AIBot, made by Uttej."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
