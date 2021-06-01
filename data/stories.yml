@@ -1,0 +1,175 @@
+version: "2.0"
+
+stories:
+
+- story: show product list
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: product_available
+  - action: utter_product_available
+  - intent: product_list
+  - action: action_product_list 
+
+- story: show bikes
+  steps: 
+  - intent: bikes
+  - action: utter_bikes
+  - action: action_bikes
+
+- story: show touring bikes
+  steps:
+  - intent: touring
+  - action: utter_touring
+  - action: action_touring
+  - action: utter_choose_negotiation
+
+- story: show road bikes
+  steps:
+  - intent: road
+  - action: utter_road
+  - action: action_road
+  - action: utter_choose_negotiation
+
+- story: show mountain bikes
+  steps:
+  - intent: mountain
+  - action: utter_mountain
+  - action: action_mountain  
+  - action: utter_choose_negotiation
+
+- story: show accessories
+  steps: 
+  - intent: accessories
+  - action: utter_accessories
+  - action: action_accessories
+
+- story: show belts
+  steps: 
+  - intent: belts
+  - action: utter_belts
+  - action: action_belts
+  - action: utter_choose_negotiation
+
+- story: show ties
+  steps: 
+  - intent: ties
+  - action: utter_ties
+  - action: action_ties  
+  - action: utter_choose_negotiation
+
+- story: show caps
+  steps: 
+  - intent: caps
+  - action: utter_caps
+  - action: action_caps
+  - action: utter_choose_negotiation
+
+- story: show fashion
+  steps: 
+  - intent: fashion
+  - action: utter_fashion
+  - action: action_fashion
+
+- story: show vintage sytle
+  steps: 
+  - intent: vintage
+  - action: utter_vintage
+  - action: action_vintage
+  - action: utter_choose_negotiation
+
+- story: show casual clothes
+  steps: 
+  - intent: casual
+  - action: utter_casual
+  - action: action_casual
+  - action: utter_choose_negotiation
+
+- story: show formal clothes
+  steps: 
+  - intent: formal
+  - action: utter_formal
+  - action: action_formal    
+  - action: utter_choose_negotiation
+
+- story: negotiation path
+  steps:
+  - intent: negotiation
+  - action: utter_negotiation
+
+- story: No negotiation needed
+  steps:
+  - intent: no_negotiation
+  - action: utter_thankyou
+  - intent: accept
+  - action: utter_thankyou
+
+- story: discount offer
+  steps:
+  - intent: discount_offer
+  - action: action_discount_offer
+
+- story: negotiate discount
+  steps:
+  - intent: discount
+  - action: action_discount
+  - action: utter_choose
+
+- story: negotiate offer
+  steps:
+  - intent: offer
+  - action: action_offer
+  - action: utter_choose
+
+- story: negotiate final accept offer path
+  steps:
+  - intent: last
+  - action: action_last
+  - action: utter_choose
+  - intent: accept
+  - action: utter_thanks
+
+- story: negotiate final refuse offer path
+  steps:
+  - intent: last
+  - action: action_last
+  - action: utter_choose
+  - intent: refuse
+  - action: utter_product_available
+
+- story: accept
+  steps:
+  - intent: accept
+  - action: utter_thanks
+
+- story: refuse
+  steps:
+  - intent: refuse
+  - action: utter_continue
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye

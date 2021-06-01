@@ -1,0 +1,313 @@
+version: "2.0"
+
+nlu:
+
+- intent: product_available
+  examples: |
+    - show me what products you have
+    - what do you have
+    - what do you guys have
+    - product list please
+    - what items do you sell
+    - what items do you have
+    - product list
+    - products available
+    - available products
+
+- intent: product_list
+  examples: |
+    - show me [bikes](product)
+    - show [bikes](product)
+    - [bikes](product)
+    - do you have [bikes](product)
+    - what [bikes](product) do you have
+    - show me [accessories](product)
+    - show [accessories](product)
+    - [accessories](product)
+    - I need [accessories](product)
+    - what [accessories](product) do you have
+    - do you have [accessories](product)
+    - show me [fashion](product)
+    - show [fashion](product)    
+    - [fashion](product)
+    - what [fashion](product) do you haves
+    - I need [fashion](product)
+    - show [fashion](product)
+
+- intent: bikes
+  examples: |
+    - [touring](bikes) bikes
+    - I want to check [touring](bikes) bikes
+    - Show me [touring](bikes) bikes
+    - show [touring](bikes) bikes
+    - [road](bikes) bikes
+    - show me [road](bikes) bikes
+    - show [road](bikes) bikes
+    - I want to check [road](bikes) bikes
+    - [mountain](bikes) bikes
+    - show me [mountain](bikes) bikes
+    - show [mountain](bikes) Bikes
+    - I want to check [mountain](bikes) Bikes
+
+- intent: touring
+  examples: |
+    - [KTM](touring) 390 Duke 
+    - I need [KTM](touring) 390 Duke
+    - Show [KTM](touring) 390 Duke
+    - [KTM](touring)
+    - [Royal Enfield](touring)
+    - I need [Royal Enfield](touring) Himalayan
+    - Show [Royal Enfield](touring) Himalayan
+    - show [Royal Enfield](touring)
+
+- intent: road
+  examples: |
+    - [race](road) bikes 
+    - I need [race](road) bikes 
+    - Show [race](road) bikes 
+    - [aero](road) bikes
+    - I need [areo](road) bikes
+    - Show [areo](road) bikes
+
+- intent: mountain
+  examples: |
+    - [trail](mountain) bikes 
+    - I need [trail](mountain) bikes 
+    - Show [trail](mountain) bikes 
+    - [downhill](mountain) bikes
+    - I need [downhill](mountain) bikes
+    - Show [downhill](mountain) bikes   
+
+- intent: accessories
+  examples: |
+    - [belts](accessories)
+    - I need [belts](accessories)
+    - Show me [belts](accessories)
+    - Show [belts](accessories)
+    - [caps](accessories)
+    - I need [caps](accessories)
+    - Show me [caps](accessories)
+    - Show [caps](accessories)
+    - [ties](accessories)
+    - Show me [ties](accessories)
+    - I need [ties](accessories)
+    - Show [ties](accessories)
+    
+- intent: belts
+  examples: |
+    - [metal](belts) belts
+    - I need [metal](belts) belts
+    - Show [metal](belts) belts
+    - [buckle](belts) belts
+    - I need [buckle](belts) belts
+    - Show [buckle](belts) belts
+
+- intent: caps
+  examples: |
+    - [baseball](caps) caps
+    - I need [baseball](caps) caps
+    - I am looking for [baseball](caps) caps
+    - show [baseball](caps) caps
+    - [fedora]](caps) caps
+    - I need [fedora](caps) caps
+    - I am looking for [fedora](caps) caps
+    - show [fedora](caps) caps
+
+- intent: ties
+  examples: |
+    - [novelty](ties) ties
+    - I need [novelty](ties) ties
+    - I am looking for [novelty](ties) ties
+    - show [novelty](ties) ties
+    - [solid]](ties) ties
+    - I need [solid](ties) ties
+    - I am looking for [solid](ties) ties
+    - show [solid](ties) ties
+
+- intent: fashion
+  examples: |
+    - [vintage](fashion) fashion style
+    - I need [vintage](fashion) fashion style
+    - Show me [vintage](fashion) fashion style
+    - Show [vintage](fashion) fashion style
+    - [casual](fashion) clothes
+    - I need [casual](fashion) clothes
+    - Show me [casual](fashion) clothes
+    - Show [casual](fashion) clothes
+    - [formal](fashion) clothes
+    - Show me [formal](fashion) clothes
+    - I need [formal](fashion) clothes
+    - Show [formal](fashion) clothes
+
+- intent: vintage
+  examples: |
+    - [flared jeans](vintage)
+    - I need [flared jeans](vintage)
+    - Show [flared jeans](vintage)
+    - [Granny Glasses](vintage)
+    - I want [Granny Glasses](vintage) 
+    - Show [Granny Glasses](vintage) 
+
+- intent: casual
+  examples: |
+    - [minidress](casual) casual
+    - I need casual [minidress](casual)
+    - Show casual [minidress](casual)
+    - [minidress](casual)
+    - [shorts](casual) 
+    - I need [shorts](casual) 
+    - Show [shorts](casual) 
+
+- intent: formal
+  examples: |
+    - formal [shirts](formal)
+    - I need a [shirts](formal)
+    - Show [shirts](formal)
+    - [shirts](formal)
+    - [jeans](formal) 
+    - formal [jeans](formal)
+    - I need [jeans](formal) 
+    - Show [jeans](formal) 
+
+- intent: negotiation
+  examples: |
+    - I want to negotiate price
+    - Yes
+    - I want to negotiate
+    - I want to start negotiation
+    - Price is too high for me I want to start negotiation
+
+- intent: no_negotiation
+  examples: |
+    - No
+    - I do not intent do start negotiation
+    - No negotiation needed
+
+- intent: discount_offer
+  examples: |
+    - how much [discount](discount_offer) can you I get for this product
+    - what is the maximum [discount](discount_offer) you can give
+    - available [discount](discount_offer)
+    - available [offer](discount_offer)
+    - [discount](discount_offer) available
+    - [offer](discount_offer) availabe
+    - how much [offer](discount_offer) can you I get for this product
+    - what is the maximum [offer](discount_offer) you can give
+    - what is the [last](discount_offer) deal you can give 
+    - [last](discount_offer) offer available 
+
+- intent: discount
+  examples: |
+    - [25](discount)%
+    - [28](discount)% off
+    - I want this for [38](discount)% off
+
+- intent: offer
+  examples: |
+    - how about discount of [35](offer)%
+    - what do you think of [20](offer)%
+    - I need a discount of [38](offer)%
+
+- intent: last
+  examples: |
+    - Not less than [19](last)%
+    - final deal [27](last)%
+    - [27]% final deal
+    - last offer [29](last)%
+
+- intent: accept
+  examples: |
+    - accept
+    - I accept the offer
+
+- intent: refuse
+  examples: |
+    - refuse
+    - I refuse the offer
+    - I want it for more discount    
+
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
